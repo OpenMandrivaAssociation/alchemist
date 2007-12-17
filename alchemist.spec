@@ -17,7 +17,6 @@ BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	chrpath
 BuildRequires:	multiarch-utils >= 1.0.3
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 
 %description
