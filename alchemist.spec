@@ -6,7 +6,7 @@ Name:		alchemist
 Version:	1.0.37
 Release:	%mkrel 2
 License:	GPL
-Group:		System Environment/Base
+Group:		System/Base
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:         alchemist-1.0.36-fix-includes.patch
 BuildRequires:	libxml2 >= 2.3.8
