@@ -4,7 +4,7 @@
 Summary:	A multi-sourced configuration back-end
 Name:		alchemist
 Version:	1.0.37
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		System Environment/Base
 Source0:	%{name}-%{version}.tar.bz2
