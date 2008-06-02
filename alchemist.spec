@@ -118,7 +118,7 @@ chrpath -d %{buildroot}%py_platsitedir/*.so
 %{_libdir}/lib*.so.*
 %{_libdir}/alchemist/blackbox/*.so.*
 %{_sysconfdir}/alchemist
-%{_localstatedir}/cache/alchemist
+%{_localstatedir}/lib/cache/alchemist
 
 
 %files -n %{libname}-devel
