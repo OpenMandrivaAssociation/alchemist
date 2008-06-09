@@ -103,9 +103,13 @@ chrpath -d %{buildroot}%{_libdir}/*.so
 chrpath -d %{buildroot}%{_libdir}/alchemist/blackbox/*.so
 chrpath -d %{buildroot}%py_platsitedir/*.so
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
