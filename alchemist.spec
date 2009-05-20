@@ -5,15 +5,14 @@ Summary:	A multi-sourced configuration back-end
 Name:		alchemist
 Version:	1.0.37
 Release:	%mkrel 4
-License:	GPL
+License:	GPLv2+
 Group:		System/Base
 Source0:	%{name}-%{version}.tar.bz2
-Patch0:         alchemist-1.0.36-fix-includes.patch
+Patch0:         %{name}-1.0.37-fix-python2.6.patch
 BuildRequires:	libxml2 >= 2.3.8
 BuildRequires:	libxslt-devel >= 0.9.0
 BuildRequires:	doxygen >= 1.2.7
 BuildRequires:	python-devel
-BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	chrpath
 BuildRequires:	multiarch-utils >= 1.0.3
@@ -67,7 +66,7 @@ encoding, and can be extended to arbitrarily large configuration scenarios.
 %prep
 
 %setup -q
-%patch0 -p0
+%patch0 -p1 -b .python26
 # lib64 fix
 find -type f | xargs perl -pi -e "s|/usr/lib|%{_libdir}|g"
 
@@ -122,7 +121,7 @@ chrpath -d %{buildroot}%py_platsitedir/*.so
 %{_libdir}/lib*.so.*
 %{_libdir}/alchemist/blackbox/*.so.*
 %{_sysconfdir}/alchemist
-%{_localstatedir}/lib/cache/alchemist
+%{_localstatedir}/cache/alchemist
 
 
 %files -n %{libname}-devel
