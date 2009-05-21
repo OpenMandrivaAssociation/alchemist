@@ -4,11 +4,12 @@
 Summary:	A multi-sourced configuration back-end
 Name:		alchemist
 Version:	1.0.37
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPLv2+
 Group:		System/Base
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:         %{name}-1.0.37-fix-python2.6.patch
+Patch1:		%{name}-1.0.37-fix-underlinking.patch
 BuildRequires:	libxml2 >= 2.3.8
 BuildRequires:	libxslt-devel >= 0.9.0
 BuildRequires:	doxygen >= 1.2.7
@@ -67,6 +68,7 @@ encoding, and can be extended to arbitrarily large configuration scenarios.
 
 %setup -q
 %patch0 -p1 -b .python26
+%patch1 -p1
 # lib64 fix
 find -type f | xargs perl -pi -e "s|/usr/lib|%{_libdir}|g"
 
