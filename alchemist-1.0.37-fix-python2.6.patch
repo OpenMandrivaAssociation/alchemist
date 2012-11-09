@@ -1,0 +1,29 @@
+diff -uNr alchemist-1.0.37.ori/src/Makefile.am alchemist-1.0.37/src/Makefile.am
+--- alchemist-1.0.37.ori/src/Makefile.am	2009-05-20 23:00:43.000000000 +0200
++++ alchemist-1.0.37/src/Makefile.am	2009-05-20 23:03:24.000000000 +0200
+@@ -1,9 +1,9 @@
+ AUTOMAKE_OPTIONS = 1.4 foreign
+ 
+-INCLUDES=$(GLIB_CFLAGS) -I/usr/include/python2.5 -ggdb $(LIBXSL_CFLAGS) $(LIBXML_CFLAGS)
++INCLUDES=$(GLIB_CFLAGS) -I/usr/include/python2.7 -ggdb $(LIBXSL_CFLAGS) $(LIBXML_CFLAGS)
+ LIBS=$(GLIB_LIBS) -lz
+ 
+-pythondatadir=$(DESTDIR)$(libdir)/python2.5/site-packages
++pythondatadir=$(DESTDIR)$(libdir)/python2.7/site-packages
+ pythondata_SCRIPTS=	Alchemist.py \
+ 			FileBlackBox.py \
+ 			CacheBlackBox.py \
+diff -uNr alchemist-1.0.37.ori/src/Makefile.in alchemist-1.0.37/src/Makefile.in
+--- alchemist-1.0.37.ori/src/Makefile.in	2009-05-20 23:00:43.000000000 +0200
++++ alchemist-1.0.37/src/Makefile.in	2009-05-20 23:03:09.000000000 +0200
+@@ -227,8 +227,8 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = 1.4 foreign
+-INCLUDES = $(GLIB_CFLAGS) -I/usr/include/python2.5 -ggdb $(LIBXSL_CFLAGS) $(LIBXML_CFLAGS)
+-pythondatadir = $(DESTDIR)$(libdir)/python2.5/site-packages
++INCLUDES = $(GLIB_CFLAGS) -I/usr/include/python2.7 -ggdb $(LIBXSL_CFLAGS) $(LIBXML_CFLAGS)
++pythondatadir = $(DESTDIR)$(libdir)/python2.7/site-packages
+ pythondata_SCRIPTS = Alchemist.py \
+ 			FileBlackBox.py \
+ 			CacheBlackBox.py \

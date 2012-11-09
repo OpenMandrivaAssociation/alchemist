@@ -1,0 +1,16 @@
+diff -uNr alchemist-1.0.37.ori/src/Makefile.in alchemist-1.0.37/src/Makefile.in
+--- alchemist-1.0.37.ori/src/Makefile.in	2009-05-21 01:34:29.000000000 +0200
++++ alchemist-1.0.37/src/Makefile.in	2009-05-21 01:35:46.000000000 +0200
+@@ -250,10 +250,10 @@
+ libalchemist_la_LIBADD = Versions
+ pyalchemist_so_SOURCES = pyalchemist.c
+ pyalchemist_so_LDFLAGS = -shared -module -Wl,-soname=pyalchemist.so
+-pyalchemist_so_LDADD = libalchemist.la
++pyalchemist_so_LDADD = libalchemist.la -lpython2.7
+ alchemistmodule_so_SOURCES = alchemistmodule.c
+ alchemistmodule_so_LDFLAGS = -shared -module -Wl,-soname=_alchemistmodule.so
+-alchemistmodule_so_LDADD = libalchemist.la
++alchemistmodule_so_LDADD = libalchemist.la -lpython2.7
+ 
+ #libfileblackbox_la_SOURCES=fileblackbox.c blackbox.h alchemist.h
+ #libfileblackbox_la_LDFLAGS=-shared -module
