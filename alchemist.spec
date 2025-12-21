@@ -10,6 +10,11 @@ Group:		System/Base
 Source0:		%{name}-%{version}.tar.bz2
 Patch0:         %{name}-1.0.37-fix-python2.6.patch
 Patch1:		%{name}-1.0.37-fix-underlinking.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libxml2 >= 2.3.8
 BuildRequires:	pkgconfig(libxslt) >= 0.9.0
 BuildRequires:	doxygen >= 1.2.7
